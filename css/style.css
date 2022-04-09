@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+h1 {
+    font-size: 4rem;
+}
+.placeHere {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+#testImg {
+    margin: 0 auto;
+    width: 25rem;
+    height: auto;
+}
+.randomBtn{
+    background: #444;
+    color: white;
+    width: 20%;
+    margin: 2rem auto;
+    line-height: 2rem;
+}
+.randomBtn:hover {
+    cursor: pointer;
+}
+.text {
+    font-size: 2.5rem;
+}
