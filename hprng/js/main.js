@@ -11,8 +11,6 @@ function generateCharacter() {
         document.querySelector('.charName').innerHTML = hasImage[rng].name
         document.querySelector('.patronus').innerText = hasImage[rng].patronus
         document.querySelector('.house').innerText = hasImage[rng].house
-
-        
     })
     .then(err => {
         console.log(`error: ${err}`)

@@ -1,5 +1,3 @@
-# Harry Potter RNG
+# API PRACTICE
 
-
-Gives you a random Harry Potter Character from the HP API  
-<https://hp-api.herokuapp.com/>
+This is a repo of practice api manipulation

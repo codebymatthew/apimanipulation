@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+#mainWrapper, p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#randomBtn{
+    display: block;
+    background: #999;
+    color: white;
+    line-height: 3rem;
+    font-size: 2rem;
+    width: 10rem;
+    text-align: center;
+    text-decoration: none;
+}
+h1 {
+    font-size: 5rem;
+    text-align: center;
+}
+h2 {
+    font-size: 3rem;
+}
+span {
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
