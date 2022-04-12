@@ -13,13 +13,13 @@ function apiList() {
     fetch('https://api.publicapis.org/entries')
     .then(res => res.json())
     .then(data => {
-        console.log(data)
+        // console.log(data)
         let freeKey = data.entries.filter(n => n['Auth'] === '' && n['HTTPS'] === true)
         let searchedArray = freeKey.filter(n => n['API'].toLowerCase().includes(userSearch.toLowerCase()))
         // console.log(searchedArray)
         if (searchedArray.length !== 0){
             for(let e of searchedArray) {
-            let pInsert = `<p><span class="titles">Name:</span> ${e['API']} | <span class="titles">Category:</span> ${e['Category']} | <span class="titles">Description:</span> ${e['Description']} | <span class="titles">URL:</span> <a href='${e['Link']}'>${e['Link']}<a></p>`
+            let pInsert = `<p class="infoLine"><span class="titles">Name:</span> ${e['API']} | <span class="titles">Category:</span> ${e['Category']} | <span class="titles">Description:</span> ${e['Description']} | <span class="titles">URL:</span> <a href='${e['Link']}'>${e['Link']}<a></p>`
             document.querySelector('.putStuffHere').insertAdjacentHTML('beforeEnd', pInsert)
         }
     }
@@ -37,12 +37,12 @@ function showErrThing() {
     fetch('https://api.publicapis.org/categories')
     .then(res => res.json())
     .then(data => {
-        console.log(data.categories.length)
+        // console.log(data.categories.length)
         for (let i = 0; i < data.categories.length; i++) {
             let categoryHtml = `<option>${data.categories[i]}</option>`
             selector.insertAdjacentHTML('beforeend', categoryHtml)
         }
-        console.log(data)
+        // console.log(data)
 
     })
     .catch(err => {
@@ -56,7 +56,7 @@ function resultFromCategory() {
     let x = document.querySelector('.putStuffHere')
     x.innerHTML = ''
     let categoryValue = document.querySelector('#categories').value
-    console.log(categoryValue)
+    // console.log(categoryValue)
     fetch('https://api.publicapis.org/entries')
     .then(res => res.json())
     .then(data => {
@@ -66,12 +66,12 @@ function resultFromCategory() {
 
     for(let e of selectedCategory) {
         
-        let pInsert = `<p class="infoLine"><span class="titles">Name:</span>  ${e['API']}| <span class="titles">Description:</span> ${e['Description']} | <span class="titles">URL:</span> <a href='${e['Link']}'>${e['Link']}<a></p>`
+        let pInsert = `<p class="infoLine"><span class="titles">Name:</span>  ${e['API']} | <span class="titles">Description:</span> ${e['Description']} | <span class="titles"> URL:</span> <a href='${e['Link']}'>${e['Link']}<a></p>`
         
         document.querySelector('.putStuffHere').insertAdjacentHTML('beforeEnd', pInsert)
         
     }
-    console.log(selectedCategory)
+    // console.log(selectedCategory)
     })
     .catch(err => {
         console.log(`error ${err}`)
