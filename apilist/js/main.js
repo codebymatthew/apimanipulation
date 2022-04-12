@@ -1,8 +1,15 @@
 document.querySelector('.searchBtn').addEventListener('click', apiList)
+document.querySelector('#searchInput').addEventListener('keydown', e => {
+    if(e.keyCode == 13) {
+        e.preventDefault()
+        return apiList()
+    }
+})
+
 function apiList() {
     let x = document.querySelector('.putStuffHere')
     x.innerHTML = ''
-    let userSearch = document.querySelector('input').value
+    let userSearch = document.querySelector('#searchInput').value
     fetch('https://api.publicapis.org/entries')
     .then(res => res.json())
     .then(data => {
@@ -12,7 +19,7 @@ function apiList() {
         // console.log(searchedArray)
         if (searchedArray.length !== 0){
             for(let e of searchedArray) {
-            let pInsert = `<p>Name: ${e['API']}, Category: ${e['Category']}, Description: ${e['Description']}, URL: <a href='${e['Link']}'>${e['Link']}<a></p>`
+            let pInsert = `<p><span class="titles">Name:</span> ${e['API']} | <span class="titles">Category:</span> ${e['Category']} | <span class="titles">Description:</span> ${e['Description']} | <span class="titles">URL:</span> <a href='${e['Link']}'>${e['Link']}<a></p>`
             document.querySelector('.putStuffHere').insertAdjacentHTML('beforeEnd', pInsert)
         }
     }
@@ -59,7 +66,7 @@ function resultFromCategory() {
 
     for(let e of selectedCategory) {
         
-        let pInsert = `<p class="infoLine"><span class="infoName">Name: ${e['API']}</span> | Description: ${e['Description']} | URL: <a href='${e['Link']}'>${e['Link']}<a></p>`
+        let pInsert = `<p class="infoLine"><span class="titles">Name:</span>  ${e['API']}| <span class="titles">Description:</span> ${e['Description']} | <span class="titles">URL:</span> <a href='${e['Link']}'>${e['Link']}<a></p>`
         
         document.querySelector('.putStuffHere').insertAdjacentHTML('beforeEnd', pInsert)
         

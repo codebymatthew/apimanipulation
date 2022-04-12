@@ -23,9 +23,9 @@ h2, h1 {
     display: flex;
     /* flex-direction: column; */
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     flex-wrap: wrap;
-    text-align: center;
+    /* text-align: center; */
 }
 .inputFields, h1 {
     width: 100%;
@@ -38,7 +38,7 @@ h2, h1 {
     margin-bottom: 1rem;
     /* border-bottom: .1rem solid #eee; */
 }
-a {
+.titles {
     color: #fff;
 }
 select, input, button {
@@ -50,4 +50,7 @@ input::placeholder {
 }
 .firstCat {
     color: lightgrey;
+}
+a {
+    color: #5f5
 }
