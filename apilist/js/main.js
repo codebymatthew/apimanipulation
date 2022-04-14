@@ -19,7 +19,7 @@ function apiList() {
         // console.log(searchedArray)
         if (searchedArray.length !== 0){
             for(let e of searchedArray) {
-            let pInsert = `<p class="infoLine"><span class="titles">Name:</span> ${e['API']} | <span class="titles">Category:</span> ${e['Category']} | <span class="titles">Description:</span> ${e['Description']} | <span class="titles">URL:</span> <a href='${e['Link']}'>${e['Link']}<a></p>`
+            let pInsert = `<p class="infoLine"><span class="titles">Name:</span> ${e['API']} | <span class="titles">Category:</span> ${e['Category']} | <span class="titles">Description:</span> ${e['Description']} | <span class="titles">URL:</span> <a target="blank" href='${e['Link']}'>${e['Link']}<a></p>`
             document.querySelector('.putStuffHere').insertAdjacentHTML('beforeEnd', pInsert)
         }
     }
@@ -66,7 +66,7 @@ function resultFromCategory() {
 
     for(let e of selectedCategory) {
         
-        let pInsert = `<p class="infoLine"><span class="titles">Name:</span>  ${e['API']} | <span class="titles">Description:</span> ${e['Description']} | <span class="titles"> URL:</span> <a href='${e['Link']}'>${e['Link']}<a></p>`
+        let pInsert = `<p class="infoLine"><span class="titles">Name:</span>  ${e['API']} | <span class="titles">Description: </span> ${e['Description']} | <span class="titles"> URL:</span> <a target="blank" href='${e['Link']}'>${e['Link']}<a></p>`
         
         document.querySelector('.putStuffHere').insertAdjacentHTML('beforeEnd', pInsert)
         

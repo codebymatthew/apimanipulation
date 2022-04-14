@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+.drinkImg {
+    height: auto;
+    width: 20rem;
+    border-radius: 50%;
+}
+.addFromApi {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.drinkSection {
+    width: 21%;
+    margin: 1%;
+    font-size: 2rem;
+}
+.inputWrapper {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+img {
+    max-width: 99vw;
+    height: auto;
+}
+.here1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hereBtn {
+    width: 20%;
+    margin-bottom: 2.5rem;
+}
+h1 {
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
